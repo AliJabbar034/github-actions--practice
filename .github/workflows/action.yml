@@ -11,7 +11,7 @@ jobs:
      - name: Run Project
        uses: actions/checkout@v4
      - run: npm install   
-     - run: npm run start   
+    #  - run: npm run start   
 
      - name: Build Project
        uses: actions/checkout@v4
