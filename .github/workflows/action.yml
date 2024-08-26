@@ -10,7 +10,7 @@ jobs:
 
      - name: Run Project
        uses: actions/checkout@v4
-     - run: npm run dev   
+     - run: npm run start   
 
      - name: Build Project
        uses: actions/checkout@v4
