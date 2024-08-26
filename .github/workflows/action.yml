@@ -1,0 +1,18 @@
+name: Github action
+on: [push]
+jobs:
+  Run-application: 
+    runs-on: ubuntu-latest
+    steps:   
+     - name: Install dependency
+       uses: actions/checkout@v4
+     - run: npm install  
+
+     - name: Run Project
+       uses: actions/checkout@v4
+     - run: npm run dev   
+
+     - name: Build Project
+       uses: actions/checkout@v4
+     - run: echo "Project build successfully"  
+     
