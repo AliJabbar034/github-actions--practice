@@ -29,24 +29,6 @@ jobs:
       - name: Get Chrome executable path
         id: chrome-path
         run: |
-          CHROME_EXECUTABLE_PATH=$(find $PWD/linux-chrome -name google-chrome)
+          CHROME_EXECUTABLE_PATH=$(find $PWD/linux-chrome -name google-chrome | head -n 1)
           echo "CHROME_EXECUTABLE_PATH=$CHROME_EXECUTABLE_PATH" >> $GITHUB_ENV
           echo "Chrome executable path: $CHROME_EXECUTABLE_PATH"
-
-# jobs:
-#   Run-application: 
-#     runs-on: ubuntu-latest
-#     steps:   
-#      - name: Install dependency
-#        uses: actions/checkout@v4
-#      - run: npm install  
-
-#      - name: Run Project
-#        uses: actions/checkout@v4
-#      - run: npm install   
-#     #  - run: npm run start   
-
-#      - name: Build Project
-#        uses: actions/  @v4
-#      - run: echo "Project build successfully"  
-    
